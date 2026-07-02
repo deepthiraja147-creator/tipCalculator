@@ -1,3 +1,4 @@
+//Getting Elements
 const bill = document.getElementById("bill");
 const people = document.getElementById("people");
 const peopleError = document.getElementById("peopleError");
@@ -52,7 +53,7 @@ function calculate() {
 
     if (tipPercent === 0) {
         tipAmount.textContent = "$0.00";
-        totalAmount.textContent = "$0.00";
+        totalAmount.textContent = totalAmount.textContent = "$" + (Number(bill.value) / Number(people.value)).toFixed(2);
         return;
     }
 
