@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fliud header">
+        SPIL <br>TTER
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="input">
+                    <h6>Bill</h6>
+                    <div class="amtip">
+                        <input class="ip2" id="bill" placeholder="0.00" type="text"
+                            oninput="this.value=this.value.replace(/[^0-9.]/g,'')">
+                        <p class="personicon2">$</p>
+                    </div>
+                    <h6>Select Tip %</h6>
+                    <div class="card" data-tip="5">5%</div>
+                    <div class="card" data-tip="10">10%</div>
+                    <div class="card" data-tip="15">15%</div>
+                    <div class="card" data-tip="20">20%</div>
+                    <div class="card" data-tip="25">25%</div>
+
+                    <input id="custom" class="card-1" type="text" placeholder="Custom"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <h6 class="m-0">Number of People</h6>
+                        <small id="peopleError" class="text-danger"></small>
+                    </div>
+
+                    <div class="pplip">
+                        <input class="ip2" id="people" type="text" placeholder="0"
+                            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                        <i class="bi bi-person-circle personicon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="amt p-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="theader mb-0">Tip Amount</h6>
+                            <small class="person">/ person</small>
+                        </div>
+                        <h1 class="amount mb-0" id="tipAmount">$0.00</h1>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="theader mb-0">Total Amount</h6>
+                            <small class="person">/ person</small>
+                        </div>
+                        <h1 class="amount mb-0" id="totalAmount">$0.00</h1>
+                    </div>
+                    <button class="reset" id="reset">RESET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./bundle.js"></script>
+
+</body>
+
+</html>
